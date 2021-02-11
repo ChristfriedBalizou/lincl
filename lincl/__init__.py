@@ -85,8 +85,17 @@ def controller(func):
         communicate = kwargs.pop("communicate", {})
         popen = kwargs.pop("popen", {})
 
+        popen["stdout"] = subprocess.PIPE
+        popen["stderr"] = subprocess.PIPE
+        popen["universal_newlines"] = True
+
         with subprocess.Popen(commands, **popen) as process:
             stdout, stderr = process.communicate(**communicate)
+
+            if process.returncode != 0:
+                raise RuntimeError(stderr)
+
+            return stdout, stderr
 
     return wrapper
 
