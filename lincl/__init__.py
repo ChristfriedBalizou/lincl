@@ -81,7 +81,7 @@ def controller(func):
               forwarded to Popen
         """
 
-        commands = [func()] + transcribe(*args, **kwargs),
+        commands = [func()] + transcripte(*args, **kwargs),
         communicate = kwargs.pop("communicate", {})
         popen = kwargs.pop("popen", {})
 
@@ -91,11 +91,11 @@ def controller(func):
     return wrapper
 
 
-def transcribe(*args: List[str], **kwargs: Dict[str, Any]) -> List[str]:
+def transcripte(*args: List[str], **kwargs: Dict[str, Any]) -> List[str]:
     """Transcribe args and kwargs to linux base schema
 
     ```
-    transcribe("start", uid="foobar", read_only=True)
+    transcripte("start", uid="foobar", read_only=True)
     >> --uid=foobar --read-only start
     ```
 
