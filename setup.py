@@ -72,11 +72,9 @@ setup(
     long_description=read("README.md"),
     cmdclass={"test": PyTest},
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
-        "Environment :: Console",
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python",
         "Programming Language :: Python :: 3.7",
     ],
     keywords="subprocess popen check_output check_call dynamicmethods",
