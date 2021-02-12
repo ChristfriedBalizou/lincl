@@ -1,4 +1,5 @@
-![Deploy Python Package](https://github.com/ChristfriedBalizou/lincl/workflows/Deploy%20Python%20Package/badge.svg)
+.. |Deploy Python Package| image:: https://github.com/ChristfriedBalizou/lincl/workflows/Deploy%20Python%20Package/badge.svg
+   :target:
 
 lincl
 -----
