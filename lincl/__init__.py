@@ -122,21 +122,24 @@ def transcripte(*args: List[str], **kwargs: Dict[str, Any]) -> List[str]:
     commands: List = []
 
     for option, value in kwargs.items():
+
         if len(option) == 1:
-            # We will not support shortname options
-            raise SyntaxError(
-                f"Shortname options '{option}' is not currently supported."
-            )
+            option = f"-{option}"
+        else:
+            option = f"--{option}"
+
+        option = option.replace("_", "-")
+        # change snake_case python name to use minus
 
         if isinstance(value, bool):
             # We don't need to continue we can stop here
-            commands.append(f"--{option}")
+            commands.append(option)
         elif isinstance(value, list):
             # We will use comma separated list. Space separation is not
             # will not be supported
-            commands.append("--{}={}".format(option, ",".join(value)))
+            commands.append("{}={}".format(option, ",".join(value)))
         else:
-            commands.append("--{option}={value}")
+            commands.append(f"{option}={value}")
 
     for command in args:
         commands.append(command)
