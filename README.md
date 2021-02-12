@@ -1,3 +1,5 @@
+![Upload Python Package](https://github.com/ChristfriedBalizou/lincl/workflows/Upload%20Python%20Package/badge.svg)
+
 # lincl
 Linux commands line as python methods
 
