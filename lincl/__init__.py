@@ -144,26 +144,30 @@ def transcripte(*args: List[str], **kwargs: Dict[str, Any]) -> List[str]:
     return commands
 
 
-def loader(program: str):
+def loader(method: str):
     """ Load an executable program
 
     This will load the given Linux command through a subprocess.Popen
-    and will return the output
+    and will return the output.
+
+    Using shutil.which we want to find the executable script and
+    make sure the script can be executed using os.X_OK.
+
+    This is equivalent to:
+
+    ```bash
+    test -x $program || exit 0
+    ```
     """
+    script = shutil.which(method, mode=os.X_OK)
+
+    if not script:
+        raise ImportError(f"Script for {method} not found.")
 
     @controller
     def program(*args: List[str], **kwargs: Dict[str, str]):
         """Simply return the program path
-
-        Using shutil.which we want to find the executable script and
-        make sure the script can be executed using os.X_OK.
-
-        This is equivalent to:
-
-        ```bash
-        test -x $program || exit 0
-        ```
         """
-        return shutil.which(program, mode=os.X_OK)
+        return script
 
     return program
