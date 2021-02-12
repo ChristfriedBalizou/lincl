@@ -1,5 +1,4 @@
-.. |Deploy Python Package| image:: https://github.com/ChristfriedBalizou/lincl/workflows/Deploy%20Python%20Package/badge.svg
-   :target:
+.. image:: https://github.com/ChristfriedBalizou/lincl/workflows/Deploy%20Python%20Package/badge.svg
 
 lincl
 -----
