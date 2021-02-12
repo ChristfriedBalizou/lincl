@@ -97,7 +97,7 @@ def controller(func):
             stdout, stderr = process.communicate(**communicate)
 
             if process.returncode != 0:
-                raise RuntimeError(stderr)
+                raise RuntimeError(f"{' '.join(commands)}\n\n{stderr}")
 
             return stdout, stderr
 
