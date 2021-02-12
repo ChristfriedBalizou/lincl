@@ -29,7 +29,7 @@ Description:
     NOTICE: from package import * # Is not supported
 """
 __title__ = "lincl"
-__version__ = "1.0"
+__version__ = "1.0.1"
 __author__ = "Christfried BALIZOU"
 
 import os
