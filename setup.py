@@ -69,7 +69,7 @@ setup(
     name="lincl",
     version=find_version("lincl", "__init__.py"),
     description="Linux commands line",
-    long_description=read("README.md"),
+    long_description=read("README.rst"),
     cmdclass={"test": PyTest},
     classifiers=[
         "Development Status :: 5 - Production/Stable",
