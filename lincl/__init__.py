@@ -85,7 +85,7 @@ def controller(func):
               forwarded to Popen
         """
 
-        commands = [func()] + transcripte(*args, **kwargs),
+        commands = [func()] + transcripte(*args, **kwargs)
         communicate = kwargs.pop("communicate", {})
         popen = kwargs.pop("popen", {})
 
