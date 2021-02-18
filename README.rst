@@ -44,10 +44,13 @@ To use this package you need:
 Installation
 ------------
 
-There is no pip package if you are interested in having one feel free to
-suggest. Otherwize install using:
+install using:
 
-.. code::bash
+.. code:: bash
+    
+    pip install lincl
+    
+    # or
 
     pip install git+https://github.com/ChristfriedBalizou/lincl.git#egg=lincl
     
