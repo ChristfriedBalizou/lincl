@@ -1,4 +1,4 @@
-.. image:: https://github.com/ChristfriedBalizou/lincl/workflows/Deploy%20Python%20Package/badge.svg?branch=1.0%3B3
+.. image:: https://github.com/ChristfriedBalizou/lincl/actions/workflows/python-publish.yml/badge.svg
 
 lincl
 -----
