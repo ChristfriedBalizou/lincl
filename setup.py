@@ -86,5 +86,5 @@ setup(
     tests_require=TESTS_REQUIRES,
     extras_require=EXTRAS_REQUIRE,
     include_package_data=True,
-    python_requires=">=3.7"
+    python_requires=">=3.6"
 )
